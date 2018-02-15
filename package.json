@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "fs": "0.0.1-security",
+        "json-format": "1.0.1",
         "promise": "8.0.1",
         "puppeteer": "1.0.0",
         "babel-cli": "^6.26.0",
