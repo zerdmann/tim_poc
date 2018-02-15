@@ -1,0 +1,10 @@
+xhrRequests.json
+npm-debug.log
+/node_modules/
+/dist/
+
+# compiled output
+/dist
+
+# dependencies
+/node_modules
