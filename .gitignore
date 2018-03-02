@@ -3,7 +3,9 @@ npm-debug.log
 /dist/
 
 # compiled output
-/dist
+/jcr_root
+
+/build/entry.config.js
 
 # dependencies
 /node_modules
