@@ -21,17 +21,27 @@ readdirp({
         entries.forEach(function (item) {
             var parent = item.split("/")[0];
             file[parent + "/component"] = root + "/" + item;
+
+            //html
             if (item.endsWith(".html")) {
                 copies.push({
                     from: root + "/" + item,
+                    to: parent,
+                    transform: true
+                });
+
+                copies.push({
+                    from: "./scripts/boiler_plates/js.txt",
                     to: parent
                 });
 
-                //hijacking
-                copies.push({from: "./scripts/boiler_plates/js.txt", to: parent});
-
                 //htl sly
-                //copies.push({from: root + "/" + parent + "/sly/*.js", to: parent});
+                var htl = {
+                    from: root + "/" + parent + "/sly",
+                    to: parent + "/sly"
+                };
+
+                copies.push(htl);
             }
         })
 
@@ -39,13 +49,13 @@ readdirp({
             entry: file,
             copies: copies
         });
-        
+
         fs.writeFile("./scripts/entry.config.js", file, function (err) {
             if (err) {
                 return console.log(err);
             }
             console.log("entry.config.js was created!");
         });
-    
+
 
     });
