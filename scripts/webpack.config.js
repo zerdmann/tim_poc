@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
 entry: entryConfig.entry,
 output: {
-    path: path.resolve(__dirname, '../jcr_root/etc/designs/morningstar'),
+    path: path.resolve(__dirname, '../src/jcr_root/etc/designs/morningstar'),
     filename: '[name].js'
 },
 plugins: [

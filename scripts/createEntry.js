@@ -5,7 +5,7 @@ var fs = require('fs');
 var entries = [];
 // Glob file filter
 
-var root = "./src";
+var root = "./components";
 
 readdirp({
         root: root,
