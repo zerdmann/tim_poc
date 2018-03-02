@@ -35,7 +35,7 @@ readdirp({
             }
         })
 
-        file = "module.exports = " + JSON.stringify({
+        file = "//auto generated from createEntry.js \n//" + new Date().toString() + "\n\n module.exports = " + JSON.stringify({
             entry: file,
             copies: copies
         });
